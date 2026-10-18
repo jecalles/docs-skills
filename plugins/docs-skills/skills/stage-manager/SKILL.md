@@ -193,6 +193,13 @@ user asks.
     staging documents cite line ranges needs a checker for that format
     before Haiku can re-measure them.
 
+## Changing this skill
+
+**A change to this skill is not staged.** The skill file is tooling, not a
+claim about the work, so the user's ask is enough: edit it, commit it,
+push it. This exempts the skill's own file only. The repositories it
+coordinates stage as before.
+
 ## Turning off
 
 On the user's word, confirm and list what is still open. Mark the
