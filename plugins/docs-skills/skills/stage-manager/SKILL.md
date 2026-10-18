@@ -103,9 +103,11 @@ user asks.
 
 1. **One owner per staging document.** Only the owner writes its drafted
    edits and its ruling ledger. Anyone else adds a signed note or asks
-   the owner. When the owner is gone, a subagent reads its transcript,
-   and the user can resume it with `claude --resume <session id>` from
-   its directory. **Uncollected work** is a worktree with uncommitted or
+   the owner. **Refreshing a staging file** (turning tags into rulings,
+   redrafting to a ruling, re-measuring) goes to the session that owns
+   it. When no owner can be reached, do it yourself in the chat: no
+   subagent, no waiting for a resume. Sign the change in the file. This
+   covers staging files only, never tracked files. **Uncollected work** is a worktree with uncommitted or
    unmerged work and no live session. Task-chip sessions report to the
    user, not to the session that offered them, so nothing collects
    them. Report each one; adopt only on the user's yes.
@@ -169,7 +171,7 @@ user asks.
    what it computes.
 
 9. **Route tags by owner.** A tag in a staging document goes to its
-   owner. A tag in a tracked file goes to the owner of a live proposal
+   owner; with no reachable owner, clear it yourself under rule 1. A tag in a tracked file goes to the owner of a live proposal
    that edits that file. Otherwise it goes to the user. Grep again
    before each pass.
 
