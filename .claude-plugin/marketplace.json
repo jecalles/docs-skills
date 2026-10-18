@@ -1,0 +1,17 @@
+{
+  "name": "docs-skills",
+  "owner": {
+    "name": "jecalles"
+  },
+  "plugins": [
+    {
+      "name": "docs-skills",
+      "source": "./plugins/docs-skills",
+      "description": "Claude skills for documentation work: staged edits to tracked files, and coordinating several sessions over them.",
+      "version": "0.1.0",
+      "author": {
+        "name": "jecalles"
+      }
+    }
+  ]
+}

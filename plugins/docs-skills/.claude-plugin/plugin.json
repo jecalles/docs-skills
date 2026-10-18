@@ -1,0 +1,10 @@
+{
+  "name": "docs-skills",
+  "displayName": "Docs Skills",
+  "version": "0.1.0",
+  "description": "Claude skills for documentation work: staged edits to tracked files, and coordinating several sessions over them.",
+  "author": {
+    "name": "jecalles"
+  },
+  "license": "MIT"
+}
