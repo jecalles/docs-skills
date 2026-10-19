@@ -127,7 +127,11 @@ user asks.
    made with a pathspec, `git commit -m ... -- <paths>`: a bare `git
    commit` takes the whole shared index, and swept another session's
    staged files into a commit within two hours of the first dry run.
-   Claim a direct write in the prompt book first. Never two direct writers on
+   Keep one fold-in agent resumable across a run of fold-ins and send each
+   next file to it; its report is a header, so check the commit's file list.
+   If the permission classifier denies a compound or destructive command,
+   split it into single steps; if one is still denied, stop and ask the
+   user. Claim a direct write in the prompt book first. Never two direct writers on
    one file. A ruling is not approval to apply: never tell a peer to fold
    in unless the user said to apply that document.
 
@@ -198,8 +202,9 @@ user asks.
 ## Changing this skill
 
 **A change to this skill is not staged.** The skill file is tooling, not a
-claim about the work, so the user's ask is enough: edit it, commit it,
-push it. This exempts the skill's own file only. The repositories it
+claim about the work. Propose revisions in chat when a session shows friction.
+On the user's yes, edit it, commit it, push it. Never edit or push it
+unasked. This exempts the skill's own file only. The repositories it
 coordinates stage as before.
 
 ## Turning off
