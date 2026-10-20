@@ -89,7 +89,7 @@ Four parts:
    hides whether the claim had a rationale behind it, and **a rationale is
    what makes a false claim look checked.**
 3. **The edit sites**, as a table of file, line, current text, proposed text.
-4. **What it leaves open**, worded as explicit questions to the Editor. A statement of what is unresolved reads as a status report and gets skimmed; a question gets answered. Each question carries the text and terms it needs; see *Open questions go at the top*.
+4. **What it leaves open**, worded as explicit questions to the Editor. A statement of what is unresolved reads as a status report and gets skimmed; a question gets answered. Each question carries the text and terms it needs; see *Open questions go at the top*. Each question is its own paragraph, never a table row; the edit sites are the only table.
 
 ## Why the ceremony is worth it
 
@@ -252,10 +252,31 @@ Editor asking what they meant. Before handing a document over, reread each
 open question as the Editor would: if answering it means opening another file,
 the question is not finished.
 
-**The format that reads well:** a bold `**Qn. The question.**` opening one
-paragraph, the material above after it, and a `> Editor:` line directly below
-for the ruling. A ruled question keeps its place and gains "RULED" and the
-Editor's words.
+**The format.** Each question is a paragraph that opens with a bold
+`**Qn. The question.**`. After it, in this order: the context and evidence (the
+quoted text, with file, line and pin); what each answer would change; and a
+recommendation. Then a `> Editor:` line directly below for the ruling. A ruled
+question keeps its place and gains "RULED" and the Editor's words.
+
+**Never put a question in a table**, in a staging document or in any list of
+open questions kept for the Editor. A table cell squeezes the question into a
+phrase, leaves no room for the context above, and hides the Editor's inline
+reply at the end of a long row, where a grep cut to width misses it. The file
+is also hard to read in a terminal editor. On 2026-10-20 a document held seven
+questions as table rows, and the Editor sent five back asking for more context.
+A status table that indexes questions is fine only if every question also
+appears in full as a paragraph.
+
+**Disclosures go in their own section.** Something the drafter reports and
+needs no ruling on — a push made ahead of a go, a correction to an earlier
+claim, a session that wrote into another's worktree — goes under
+`## Disclosures (no ruling needed)`, after the open questions, in a staging
+document and in any list of open questions kept for the Editor. Written as a
+question, a disclosure costs the Editor a read to find there is nothing to
+decide. On 2026-10-20 the Editor answered one with *"is this a question? need
+more context to opine"*. If a disclosure does carry a decision (should this be
+undone?), the decision is the question, and only that part goes in the open
+questions.
 
 ## A staging document is `.md`, and so is every question in it
 
